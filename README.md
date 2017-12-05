@@ -6,7 +6,9 @@ HWFlashTool is recognised by your computer as a mass storage device, which means
 
 ## Writing to the flash
 
-Before writing to the flash, you need to erase the block. This can be done using a SCSI command. To issue this command, you can use [sg_format]() utility (available in `sg3_utils` on Fedora) :
+Before writing to the flash, you need to erase the block you will be writing to. This can't be done automatically at write because the flash's sector size is different to unicore-mx's sector size.
+
+However, this can be done before flashing using a SCSI command that will erase the whole flash. To issue this command, you can use [sg_format](https://linux.die.net/man/8/sg_format) utility (available in `sg3_utils` on Fedora) :
 
 ```
 $ sudo sg_format --six --format /dev/sdb
