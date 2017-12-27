@@ -2,6 +2,8 @@
 
 Hardware programmer for SST39VF1601, SST39VF1602, SST39VF3201, SST39VF3202. With some new support files in `/src/cmdset`, it could be used to program other flash chips.
 
+![HWFlashTool built on perfboard](docs/hwflashtool-proto.jpg)
+
 HWFlashTool is recognised by your computer as a mass storage device, which means you don't need to install any driver to read data from the flash.
 
 ## Writing to the flash
